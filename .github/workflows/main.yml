@@ -3,6 +3,7 @@ on:
     paths:
       - 'src/**'
       - '!src/ModFiles/**'
+      - '!src/ModFilesVPK/**'
 
 env:
   VERSION: "2.3.0"
@@ -35,7 +36,7 @@ jobs:
         with:
           nuitka-version: main
           script-name: src/MainWindow.py
-          onefile: true
+          mode: app
           noinclude-data-files: "pygame/freesansbold.ttf"
           include-data-dir: |
               src/Languages=Languages
